@@ -145,3 +145,19 @@ style.textContent = `
     }
 `;
 document.head.appendChild(style);
+
+// Copy account number functionality
+document.querySelectorAll('.copy-btn').forEach(button => {
+    button.addEventListener('click', function() {
+        const accountNumber = this.getAttribute('data-account');
+        navigator.clipboard.writeText(accountNumber).then(() => {
+            const originalText = this.textContent;
+            this.textContent = 'Copied!';
+            setTimeout(() => {
+                this.textContent = originalText;
+            }, 2000);
+        }).catch(err => {
+            console.error('Failed to copy:', err);
+        });
+    });
+});

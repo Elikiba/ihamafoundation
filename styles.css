@@ -866,6 +866,63 @@ body {
     height: 24px;
 }
 
+/* Donation Accounts Section */
+.accounts-grid {
+    display: grid;
+    gap: calc(var(--spacing-unit) * 3);
+    margin-top: calc(var(--spacing-unit) * 4);
+}
+
+.account-card {
+    background: var(--color-bg);
+    border-radius: calc(var(--spacing-unit));
+    padding: calc(var(--spacing-unit) * 3);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.account-title {
+    color: var(--color-primary);
+    margin-bottom: calc(var(--spacing-unit) * 2);
+    font-size: 1.25rem;
+}
+
+.account-details p {
+    margin-bottom: calc(var(--spacing-unit));
+}
+
+.account-number {
+    font-family: monospace;
+    font-size: 1.1em;
+    color: var(--color-text);
+    background: var(--color-bg-alt);
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+
+.copy-btn {
+    margin-top: calc(var(--spacing-unit) * 2);
+}
+
+.bank-address {
+    text-align: center;
+    margin-top: calc(var(--spacing-unit) * 4);
+    padding: calc(var(--spacing-unit) * 2);
+    background: var(--color-bg-alt);
+    border-radius: calc(var(--spacing-unit));
+}
+
+@media (min-width: 768px) {
+    .accounts-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 767px) {
+    .account-card {
+        padding: calc(var(--spacing-unit) * 2);
+    }
+}
+
 /* Responsive Design */
 @media (min-width: 640px) {
     .hero-title {
